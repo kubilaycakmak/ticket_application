@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
-import 'dart:convert';
-import 'package:http/io_client.dart';
-import 'package:http/http.dart' as http;
-import 'package:rpc/rpc.dart';
 
 class AddScreen extends StatefulWidget {
   @override
@@ -14,6 +9,7 @@ class AddScreen extends StatefulWidget {
 
 class AddScreenState extends State<AddScreen> {
   TextEditingController flightCodeController = new TextEditingController();
+  String emptyCell = "";
   @override
   Widget build(BuildContext context) {
     var currentColor = Colors.grey[200];
@@ -33,6 +29,14 @@ class AddScreenState extends State<AddScreen> {
           ),
         ),
         actions: <Widget>[
+          IconButton(
+            onPressed: (){
+              setState(() {
+                flightCodeController.text = "";
+              });
+            },
+            icon: Icon(Icons.refresh, color: iconColors,),
+          ),
           IconButton(
             onPressed: (){},
             icon: Icon(Icons.delete, color: iconColors,),

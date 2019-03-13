@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_application/model/TicketModel.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -28,6 +29,11 @@ class HomeScreen extends StatelessWidget {
               fontSize: 25.0
             ),
           ),
+        ),
+        body: Column(
+          children: <Widget>[
+              TicketModel(),
+          ],
         ),
       );
   }
