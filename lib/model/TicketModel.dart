@@ -30,4 +30,5 @@ final ticketCard = new Container(
     ]
   ),
 );
-final ticketIcon = new Container();
+final ticketIcon = new Container(
+);
